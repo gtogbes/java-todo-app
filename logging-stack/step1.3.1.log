@@ -1,0 +1,113 @@
+mac@OG logging-stack % docker compose up -d                       
+[+] Running 21/21
+ ⠿ kibana Pulled                                                                                                                                   987.2s
+   ⠿ 8839ddd004a1 Pull complete                                                                                                                    263.6s
+   ⠿ 3498c43de013 Pull complete                                                                                                                    263.8s
+   ⠿ 9baacb6a5976 Pull complete                                                                                                                    263.9s
+   ⠿ 9044f8976044 Pull complete                                                                                                                    976.3s
+   ⠿ cdebdb0a44d8 Pull complete                                                                                                                    976.6s
+   ⠿ eac3b299bbee Pull complete                                                                                                                    976.7s
+   ⠿ 382e4aeba904 Pull complete                                                                                                                    976.9s
+   ⠿ a3a3e591bf94 Pull complete                                                                                                                    977.0s
+   ⠿ 614c70d210ae Pull complete                                                                                                                    977.3s
+   ⠿ 2a29b580c164 Pull complete                                                                                                                    977.5s
+ ⠿ elasticsearch Pulled                                                                                                                            623.6s
+   ⠿ 86dbb57a3083 Pull complete                                                                                                                    250.3s
+   ⠿ f8ab62efd495 Pull complete                                                                                                                    250.5s
+   ⠿ 31776fedb300 Pull complete                                                                                                                    253.3s
+   ⠿ acc5e33cc513 Pull complete                                                                                                                    253.4s
+   ⠿ 1bdebdf28510 Pull complete                                                                                                                    618.6s
+   ⠿ 2357752950d7 Pull complete                                                                                                                    618.8s
+   ⠿ 4595b87dacdf Pull complete                                                                                                                    619.1s
+   ⠿ eed5e84f8c00 Pull complete                                                                                                                    619.3s
+   ⠿ da76c70d0954 Pull complete                                                                                                                    619.5s
+[+] Building 55.3s (7/7) FINISHED                                                                                                                         
+ => [internal] load build definition from Dockerfile                                                                                                 2.0s
+ => => transferring dockerfile: 188B                                                                                                                 0.4s
+ => [internal] load .dockerignore                                                                                                                    0.1s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [internal] load metadata for docker.io/fluent/fluent-bit:1.5.0                                                                                   3.5s
+ => [internal] load build context                                                                                                                    0.0s
+ => => transferring context: 316B                                                                                                                    0.0s
+ => [1/2] FROM docker.io/fluent/fluent-bit:1.5.0@sha256:6319f19fd1934c8edeee3bbc410ab731f762544c776d4299885213d70bfae9ae                            48.5s
+ => => resolve docker.io/fluent/fluent-bit:1.5.0@sha256:6319f19fd1934c8edeee3bbc410ab731f762544c776d4299885213d70bfae9ae                             0.0s
+ => => sha256:ca4e3177dc8e5195d6ce24c7924660d830d32c09db589f9c8d59573902359376 12.60kB / 12.60kB                                                     0.0s
+ => => sha256:3ddae62150f2786488d46e9c0d1c630dd9cf48650303629904701a5fe7d82daf 642.91kB / 642.91kB                                                   1.3s
+ => => sha256:6319f19fd1934c8edeee3bbc410ab731f762544c776d4299885213d70bfae9ae 1.05kB / 1.05kB                                                       0.0s
+ => => sha256:c5900d68e237a708ba0bdecd3e9cb0778fcca43e205872a1daa6ac8bbb454667 657.92kB / 657.92kB                                                   2.4s
+ => => sha256:d786044272c6b64e4d587010c5b1ea4f8ec86c4060055012b66e0446ad2cce44 7.25kB / 7.25kB                                                       0.0s
+ => => sha256:a0921f1d3cfe978b1537c1431a22166fec148fdbc35f2baeb591ce6b46d8cc64 8.09MB / 8.09MB                                                      32.5s
+ => => extracting sha256:3ddae62150f2786488d46e9c0d1c630dd9cf48650303629904701a5fe7d82daf                                                            0.5s
+ => => sha256:84b72df48d953b712d0b9663f1b28a60ad837f9f2f57a27d356c564b95fc4996 368.79kB / 368.79kB                                                   2.3s
+ => => sha256:a0a4ca87310637fc49e8c6a86213495bfabfe121cc223b67e05b7b045f18763d 695.40kB / 695.40kB                                                   3.6s
+ => => sha256:c4b4ecc4b909b4dd4c6d5cf0860b166a8ff3130e380d093ab29a11c4ac65edd5 125.79kB / 125.79kB                                                   3.3s
+ => => sha256:b994910bb471531538bac7b34bddc2838d4f9a56f1d8626b035d95e28919f893 484.79kB / 484.79kB                                                   5.9s
+ => => sha256:85148080cc999f5b67e1ef4919c6bf4d8ab2238e833a41d0584aab3301175c4b 2.76MB / 2.76MB                                                      10.5s
+ => => sha256:dccba83392c21161ba309eda71ec317a08d562c244ba49a731dd0d2fe7bb1fd3 888.90kB / 888.90kB                                                   8.5s
+ => => sha256:02608abe60870dfb52fd86fe2232992042cb81dead6dfdd6dd60ec844347846f 75.84kB / 75.84kB                                                     9.4s
+ => => sha256:db0036d31329166a2b51a341d028abf2b7a61fb129cc7658aa382fdc0edccbf3 165.73kB / 165.73kB                                                  10.4s
+ => => sha256:9c11807663aa43a01aa6a0b4658e8700ac284cf959946f5b8a9690e2fcee915f 117.22kB / 117.22kB                                                  11.1s
+ => => sha256:3fed653a91a39b1386ca4eb3e92aa9b22fdeaea22918b40eeacf1dde5d884cda 956.96kB / 956.96kB                                                  13.8s
+ => => sha256:b37365d49dc8410d7e6bf29a30a1d6671addb08293b07d671f4c9f351bcb9481 370.50kB / 370.50kB                                                  12.6s
+ => => sha256:970e390d5124dab7160710e400282ec0b007c355d328aba2ff2f255bc9d090af 124.09kB / 124.09kB                                                  13.6s
+ => => sha256:d565a2f3d2e0c02f8f2e3d3b427b8dce5b7fcf200120a7edc035af5b03f54a11 397.40kB / 397.40kB                                                  15.1s
+ => => sha256:8afcc5bc825bb971fead50d960c65a9c8877e5489b1b292663801a6cdc8980d3 273.23kB / 273.23kB                                                  15.1s
+ => => sha256:32b4b0980fd19ed9f636e66d7d984a50ecec7331dd47e2b4b08d94326dac0438 443.77kB / 443.77kB                                                  16.8s
+ => => sha256:aa30a5d1ac457959759635c533346a4e0d946b8c7d0e7ec2d1b738a1ca9f0651 805.89kB / 805.89kB                                                  18.4s
+ => => sha256:82e4d85a8c9af4c3fc6df9b6feac5e167feb00783ba035e1a094f45899fbb4af 198.82kB / 198.82kB                                                  18.0s
+ => => sha256:2b471b31635340f6322dc5d7d6df12f510b447d3918a6d627dbde509561f1949 52.41kB / 52.41kB                                                    18.6s
+ => => sha256:fdd010700761b4409615eb4ccac078731ed8b688d49482eb3a5ce99ce651e5aa 1.58MB / 1.58MB                                                      23.8s
+ => => sha256:57542c84d9d383b71474b497fc5447cdef6af8db26820f5d0994cb98f0140caf 608.88kB / 608.88kB                                                  20.5s
+ => => sha256:3d2a49b16eb8b00bd9221ff6e6327868b60840c7e5329bf3b757e98845b464b0 124.39kB / 124.39kB                                                  21.3s
+ => => sha256:691bcc215740c1492c2238853eab4f974778b2026b2e28f3b516c84462ab2062 1.24MB / 1.24MB                                                      24.2s
+ => => sha256:437c9953ec2360ef5c51826d1ffe87b995685e7ce6d7183577221c81c6b26b2f 73.59kB / 73.59kB                                                    24.8s
+ => => sha256:ac2e8a27442be9e56871a0b156b1f75b428754634e57481a3552f4a0cbd6c617 222.67kB / 222.67kB                                                  26.3s
+ => => sha256:4df4062dba8658515d56107f89fd3b01c6bc28b6627bce0faeaddac37d2359ba 299.02kB / 299.02kB                                                  26.3s
+ => => sha256:600bb80cf902b06af971b9533c3aa1b51964094cbf5f29e79ae0157a21d054d8 557.83kB / 557.83kB                                                  28.2s
+ => => sha256:078c50a48020159a104d9659164727dc21ed4115e3d8b5a832002cf61007035e 83.73kB / 83.73kB                                                    26.8s
+ => => sha256:660079c05592aa0aa739959d83f969a5d444a7520979bc2690e251fb62ecdda1 6.01kB / 6.01kB                                                      27.2s
+ => => sha256:a587182d8b25111af70899822963221dc361ec3e20acf7423cc50483f84f6b49 6.88kB / 6.88kB                                                      27.6s
+ => => sha256:7903f2f7554cbf995af3e340e30138a30ab6796ec930caa74cb687b7aa3cf645 8.23MB / 8.23MB                                                      46.6s
+ => => extracting sha256:a0921f1d3cfe978b1537c1431a22166fec148fdbc35f2baeb591ce6b46d8cc64                                                            1.8s
+ => => extracting sha256:c5900d68e237a708ba0bdecd3e9cb0778fcca43e205872a1daa6ac8bbb454667                                                            0.2s
+ => => extracting sha256:84b72df48d953b712d0b9663f1b28a60ad837f9f2f57a27d356c564b95fc4996                                                            0.2s
+ => => extracting sha256:a0a4ca87310637fc49e8c6a86213495bfabfe121cc223b67e05b7b045f18763d                                                            0.2s
+ => => extracting sha256:c4b4ecc4b909b4dd4c6d5cf0860b166a8ff3130e380d093ab29a11c4ac65edd5                                                            0.2s
+ => => extracting sha256:b994910bb471531538bac7b34bddc2838d4f9a56f1d8626b035d95e28919f893                                                            0.5s
+ => => extracting sha256:85148080cc999f5b67e1ef4919c6bf4d8ab2238e833a41d0584aab3301175c4b                                                            0.3s
+ => => extracting sha256:dccba83392c21161ba309eda71ec317a08d562c244ba49a731dd0d2fe7bb1fd3                                                            0.4s
+ => => extracting sha256:02608abe60870dfb52fd86fe2232992042cb81dead6dfdd6dd60ec844347846f                                                            0.1s
+ => => extracting sha256:db0036d31329166a2b51a341d028abf2b7a61fb129cc7658aa382fdc0edccbf3                                                            0.1s
+ => => extracting sha256:9c11807663aa43a01aa6a0b4658e8700ac284cf959946f5b8a9690e2fcee915f                                                            0.2s
+ => => extracting sha256:3fed653a91a39b1386ca4eb3e92aa9b22fdeaea22918b40eeacf1dde5d884cda                                                            0.3s
+ => => extracting sha256:b37365d49dc8410d7e6bf29a30a1d6671addb08293b07d671f4c9f351bcb9481                                                            0.4s
+ => => extracting sha256:970e390d5124dab7160710e400282ec0b007c355d328aba2ff2f255bc9d090af                                                            0.1s
+ => => extracting sha256:d565a2f3d2e0c02f8f2e3d3b427b8dce5b7fcf200120a7edc035af5b03f54a11                                                            0.1s
+ => => extracting sha256:8afcc5bc825bb971fead50d960c65a9c8877e5489b1b292663801a6cdc8980d3                                                            0.2s
+ => => extracting sha256:32b4b0980fd19ed9f636e66d7d984a50ecec7331dd47e2b4b08d94326dac0438                                                            0.2s
+ => => extracting sha256:aa30a5d1ac457959759635c533346a4e0d946b8c7d0e7ec2d1b738a1ca9f0651                                                            0.2s
+ => => extracting sha256:82e4d85a8c9af4c3fc6df9b6feac5e167feb00783ba035e1a094f45899fbb4af                                                            0.2s
+ => => extracting sha256:2b471b31635340f6322dc5d7d6df12f510b447d3918a6d627dbde509561f1949                                                            0.1s
+ => => extracting sha256:fdd010700761b4409615eb4ccac078731ed8b688d49482eb3a5ce99ce651e5aa                                                            0.2s
+ => => extracting sha256:57542c84d9d383b71474b497fc5447cdef6af8db26820f5d0994cb98f0140caf                                                            0.3s
+ => => extracting sha256:3d2a49b16eb8b00bd9221ff6e6327868b60840c7e5329bf3b757e98845b464b0                                                            0.2s
+ => => extracting sha256:691bcc215740c1492c2238853eab4f974778b2026b2e28f3b516c84462ab2062                                                            0.3s
+ => => extracting sha256:437c9953ec2360ef5c51826d1ffe87b995685e7ce6d7183577221c81c6b26b2f                                                            0.2s
+ => => extracting sha256:ac2e8a27442be9e56871a0b156b1f75b428754634e57481a3552f4a0cbd6c617                                                            0.2s
+ => => extracting sha256:4df4062dba8658515d56107f89fd3b01c6bc28b6627bce0faeaddac37d2359ba                                                            0.3s
+ => => extracting sha256:600bb80cf902b06af971b9533c3aa1b51964094cbf5f29e79ae0157a21d054d8                                                            0.3s
+ => => extracting sha256:078c50a48020159a104d9659164727dc21ed4115e3d8b5a832002cf61007035e                                                            0.4s
+ => => extracting sha256:660079c05592aa0aa739959d83f969a5d444a7520979bc2690e251fb62ecdda1                                                            0.0s
+ => => extracting sha256:a587182d8b25111af70899822963221dc361ec3e20acf7423cc50483f84f6b49                                                            0.0s
+ => => extracting sha256:7903f2f7554cbf995af3e340e30138a30ab6796ec930caa74cb687b7aa3cf645                                                            1.0s
+ => [2/2] ADD fluent-bit.conf /fluent-bit/etc/                                                                                                       0.4s
+ => exporting to image                                                                                                                               0.3s
+ => => exporting layers                                                                                                                              0.1s
+ => => writing image sha256:162ddfb9e07f4fc4676f1eded681cb081545d3aec6601ebd536122c36234d36a                                                         0.0s
+ => => naming to docker.io/library/logging-stack_fluentbit                                                                                           0.1s
+[+] Running 4/5
+ ⠿ Network logging-stack_correvate          Created                                                                                                  0.2s
+ ⠿ Container logging-stack-kibana-1         Started                                                                                                  4.3s
+ ⠿ Container logging-stack-fluentbit-1      Started                                                                                                  4.3s
+ ⠿ Container my-api                         Starting                                                                                                 5.0s
+ ⠿ Container logging-stack-elasticsearch-1  Started                                                                                                  4.5s

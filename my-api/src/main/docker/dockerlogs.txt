@@ -1,0 +1,48 @@
+docker % docker build -t  my-app .
+[+] Building 2.9s (8/8) FINISHED                                                                                                                          
+ => [internal] load build definition from Dockerfile                                                                                                 0.1s
+ => => transferring dockerfile: 328B                                                                                                                 0.1s
+ => [internal] load .dockerignore                                                                                                                    0.0s
+ => => transferring context: 2B                                                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/openjdk:11-jre-slim                                                                               0.9s
+ => [1/3] FROM docker.io/library/openjdk:11-jre-slim@sha256:93af7df2308c5141a751c4830e6b6c5717db102b3b31f012ea29d842dc4f2b02                         0.0s
+ => [internal] load build context                                                                                                                    1.0s
+ => => transferring context: 18.39MB                                                                                                                 1.0s
+ => CACHED [2/3] WORKDIR /app                                                                                                                        0.0s
+ => [3/3] COPY app/app.jar  app/app.jar                                                                                                              0.2s
+ => exporting to image                                                                                                                               0.3s
+ => => exporting layers                                                                                                                              0.2s
+ => => writing image sha256:5a10a0c6db62f86f9070e64b74013509626a8ede24e04fe56ef9885a996a5087                                                         0.0s
+ => => naming to docker.io/library/my-app                                                                                                            0.0s
+ docker % docker images -a
+REPOSITORY                               TAG           IMAGE ID       CREATED          SIZE
+my-app                                   latest        5a10a0c6db62   11 seconds ago   242MB
+redis                                    alpine        c1dc010e6f24   3 weeks ago      30.2MB
+postgres                                 13-alpine     251e67fbb553   7 weeks ago      232MB
+ambassador/telepresence-docker-runtime   0.1.9         c7d3fab8eb5f   13 months ago    547MB
+portainer/portainer-docker-extension     2.13.1        7b6e59279c38   14 months ago    275MB
+postgres                                 14.1-alpine   1149d285a5f5   19 months ago    209MB
+yebox@Yeboxs-MacBook-Pro-2 docker % docker run my-app
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+12:51:29.799 [main] INFO  u.c.c.hr.devops.DevopsTestApp - Starting DevopsTestApp on 9630b55ed967 with PID 1 (/app/app/app.jar started by root in /app)
+12:51:29.817 [main] INFO  u.c.c.hr.devops.DevopsTestApp - No active profile set, falling back to default profiles: default
+12:51:33.273 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+12:51:33.288 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:51:33.289 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:51:33.289 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+12:51:33.449 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:51:33.449 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3463 ms
+12:51:33.920 [main] INFO  u.c.c.hr.devops.DevopsTestApp - Starting awesome application uk.co.correvate.hr.devops:my-api:1.0.1.1691075096 ...
+12:51:34.278 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+12:51:34.819 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+12:51:34.860 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12:51:34.978 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+12:51:35.086 [main] INFO  u.c.c.hr.devops.DevopsTestApp - Started DevopsTestApp in 6.587 seconds (JVM running for 7.653)
