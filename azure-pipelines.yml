@@ -3,13 +3,8 @@ trigger:
 
 variables:
 
-  # Azure Resource Manager connection created during pipeline creation
-
   # Web app name
   webAppName: 'AzureDevopsJavaMaven'
-
-  # Environment name
-  #environmentName: 'AzureDevopsJavaMaven'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -24,11 +19,6 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
-    - task: Maven@3
-      displayName: 'Maven Package'
-      inputs:
-        mavenPomFile: 'pom.xml'
-
     - task: Maven@4
       inputs:
         mavenPomFile: 'pom.xml'
@@ -38,15 +28,12 @@ stages:
         mavenVersionOption: 'Default'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
-        sonarQubeRunAnalysis: false
-        sqMavenPluginVersionChoice: 'latest'
-        checkStyleRunAnalysis: true
-        findBugsRunAnalysis: true
-        spotBugsRunAnalysis: true
-    - task: Docker@2
-      inputs:
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        # sonarQubeRunAnalysis: false
+        # sqMavenPluginVersionChoice: 'latest'
+        # checkStyleRunAnalysis: true
+        # findBugsRunAnalysis: true
+        # spotBugsRunAnalysis: true
+  
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
@@ -56,3 +43,8 @@ stages:
 
     - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
+
+    - task: Docker@2
+      inputs:
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
