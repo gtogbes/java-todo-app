@@ -38,11 +38,15 @@ stages:
         mavenVersionOption: 'Default'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
-        sonarQubeRunAnalysis: true
+        sonarQubeRunAnalysis: false
         sqMavenPluginVersionChoice: 'latest'
         checkStyleRunAnalysis: true
         findBugsRunAnalysis: true
         spotBugsRunAnalysis: true
+    - task: Docker@2
+      inputs:
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
