@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the JAR file and Pom.xml
-COPY app/*.jar  app/app.jar
+COPY target/*.jar  app/app.jar
 
 EXPOSE 8080
 # Build command 
